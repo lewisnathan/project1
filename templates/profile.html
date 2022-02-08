@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Profile
+{% endblock %}
+
+{% block body %}
+
+    {{ session.items() }}
+    <ul>
+        {% for note in session["notes"] %}
+            <li>
+                {{ note }}
+            </li>
+        {% endfor %}
+    </ul>
+    <form action="{{ url_for('profile') }}" method="post">
+        <input type="text" name="note" placeholder="Enter Note">
+        <button>Add Note</button>
+    </form>
+    <a href="{{ url_for('logout') }}">
+        <button>Logout</button>
+    </a>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Failure
+{% endblock %}
+
+{% block body %}
+    It looks like this username is already registered
+
+    <a href="{{ url_for('login') }}">
+        <button>Login</button>
+    </a>
+    <a href="{{ url_for('register') }}">
+        <button>Register</button>
+    </a>
+{% endblock %}

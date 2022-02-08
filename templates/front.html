@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+{% endblock %}
+
+{% block body %}
+
+    <a href="{{ url_for('login') }}">
+        <button>Login</button>
+    </a>
+    <a href="{{ url_for('register') }}">
+        <button>Register</button>
+    </a>
+
+{% endblock %}
